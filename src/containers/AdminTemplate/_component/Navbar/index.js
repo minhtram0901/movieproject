@@ -22,28 +22,18 @@ export default class Navbar extends Component {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav mr-auto">
             <li className="nav-item">
-              <NavLink exact activeClassName="active" className="nav-link" to="/">
-                Home 
+              <NavLink exact activeClassName="active" className="nav-link" to="/admin">
+                Dashboard 
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink activeClassName="active" className="nav-link" to="/about">
-                About
+              <NavLink activeClassName="active" className="nav-link" to="/admin/add-user">
+                Add User
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink activeClassName="active" className="nav-link" to="/list-movie">
-                List Movie
-              </NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink activeClassName="active" className="nav-link" to="/hoc">
-                HOC
-              </NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink activeClassName="active" className="nav-link" to="/render-props">
-                Render Props
+              <NavLink activeClassName="active" className="nav-link" to="/admin/add-movie">
+                Add Movie
               </NavLink>
             </li>
           </ul>
