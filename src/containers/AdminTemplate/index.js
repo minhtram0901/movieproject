@@ -1,7 +1,6 @@
 import React, { Fragment } from "react";
-import { Route } from "react-router-dom";
+import { Route , Redirect} from "react-router-dom";
 import Navbar from "./_component/Navbar";
-
 
 function LayoutAdmin(props) {
   return (
@@ -12,17 +11,22 @@ function LayoutAdmin(props) {
   );
 }
 
-export default function AdminTemplate({Component, ...props}) {
+export default function AdminTemplate({ Component, ...props }) {
   return (
-   <Route
-    {...props}
-    render = {(propsRoute) => {
-      // console.log("propsRoute", propsRoute);
-      return (
-      <LayoutAdmin>
-        <Component {...propsRoute}/>
-      </LayoutAdmin>)
-    }}
-   />
+    <Route
+      {...props}
+      render={(propsRoute) => {
+        if (localStorage.getItem("accessToken")) {
+          return (
+            <LayoutAdmin>
+              <Component {...propsRoute} />
+            </LayoutAdmin>
+          );
+        }
+
+        //redirect về /auth
+        return <Redirect to="/auth"/>;
+      }}
+    />
   );
 }

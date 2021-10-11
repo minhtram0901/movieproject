@@ -54,17 +54,6 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    // request: () => {
-    //   dispatch(actions.actListMovieRequest());
-    // },
-
-    // success: (data) => {
-    //   dispatch(actions.actListMovieSuccess(data));
-    // },
-
-    // failed: (error) => {
-    //   dispatch(actions.actListMovieFailed(error));
-    // }
     fetchData: () => {
       dispatch(actFetchListMovie());
     },

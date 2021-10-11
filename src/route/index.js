@@ -9,6 +9,7 @@ import HomeTemplate from "../containers/HomeTemplate";
 import AdminTemplate from "../containers/AdminTemplate";
 import HocPage from "../containers/HomeTemplate/HocPage";
 import RenderProps from "../containers/HomeTemplate/RenderPropsPage";
+import HooksPage from "../containers/HomeTemplate/HooksPage";
 
 const routeHome = [
   //object cho HomePage
@@ -49,6 +50,12 @@ const routeHome = [
     exact: false, //không truyền prop exact
     path: "/render-props",
     component: RenderProps,
+  },
+  {
+    //định nghĩa các prop của route
+    exact: false, //không truyền prop exact
+    path: "/hooks",
+    component: HooksPage,
   },
 ];
 const routeAdmin = [
